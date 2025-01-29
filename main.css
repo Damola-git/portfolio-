@@ -284,3 +284,8 @@ span.ds-department{ color: #373737; font-weight: 500; font-size: 18px; padding-b
 
 
 }
+@media (max-width: 480px) {
+  .typewriter {
+    font-size: 14px; 
+  }
+}
