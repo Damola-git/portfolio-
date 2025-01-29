@@ -27,7 +27,29 @@ const textLines = [
 
 
   const typingElement = document.getElementById("typing-text");
-  let lineIndex = 0;
+const cursorSpan = document.querySelector(".cursor");
+
+let lineIndex = 0;
+let charIndex = 0;
+let typingSpeed = 100; // Adjust speed here
+let lineBreakDelay = 800; // Delay before the next line starts
+
+function typeWriter() {
+  if (lineIndex < textLines.length) {
+    if (charIndex < textLines[lineIndex].length) {
+      typingElement.innerHTML = textLines[lineIndex].substring(0, charIndex + 1) + `<span class="cursor"></span>`;
+      charIndex++;
+      setTimeout(typeWriter, typingSpeed);
+    } else {
+      // Move to the next line and keep cursor at the end
+      typingElement.innerHTML += "<br>";
+      charIndex = 0;
+      lineIndex++;
+      setTimeout(typeWriter, lineBreakDelay);
+    }
+  }
+}
+/*  let lineIndex = 0;
   let charIndex = 0;
   let typingSpeed = 100; // Speed of typing
   let lineBreakDelay = 800; // Delay before typing the next line
@@ -45,6 +67,6 @@ const textLines = [
         setTimeout(typeWriter, lineBreakDelay);
       }
     }
-  }
+  }*/
 
   typeWriter();
