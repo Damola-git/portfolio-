@@ -18,3 +18,33 @@ document.addEventListener('DOMContentLoaded', function() {
 	window.dispatchEvent(new Event('scroll'));
 
 });
+
+const textLines = [
+  "I'm Adedamola Adejumo",
+  "FRONTEND DEVELOPER from",
+  "Lagos, Nigeria."
+];
+
+const typingElement = document.querySelector(".typing-text");
+let lineIndex = 0;
+let charIndex = 0;
+let typingSpeed = 100; // Adjust speed here
+let lineBreakDelay = 800; // Delay before the next line starts
+
+function typeWriter() {
+  if (lineIndex < textLines.length) {
+    if (charIndex < textLines[lineIndex].length) {
+      typingElement.innerHTML += textLines[lineIndex].charAt(charIndex);
+      charIndex++;
+      setTimeout(typeWriter, typingSpeed);
+    } else {
+      typingElement.innerHTML += "<br>"; // Move to the next line
+      charIndex = 0;
+      lineIndex++;
+      setTimeout(typeWriter, lineBreakDelay); // Wait before typing the next line
+    }
+  }
+}
+
+typeWriter();
+
