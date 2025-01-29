@@ -1,18 +1,20 @@
-jQuery(document).ready(function($) {
+document.addEventListener('DOMContentLoaded', function() {
 
-
-	var mastheadheight = $('.ds-header').outerHeight();
+	var mastheadheight = document.querySelector('.ds-header').offsetHeight;
 	//console.log(mastheadheight);
-	$(".ds-banner,.ds-main-section").css("margin-top" , mastheadheight);
+	document.querySelectorAll('.ds-banner, .ds-main-section').forEach(function(element) {
+		element.style.marginTop = mastheadheight + 'px';
+	});
 
-	$(window).scroll(function(){
-	    if ($(window).scrollTop() >= 10) {
-	        $('.ds-header').addClass('ds-fixed-header');
-	    }
-	    else {
-	        $('.ds-header').removeClass('ds-fixed-header');
-	    }
-	}).scroll();
+	window.addEventListener('scroll', function() {
+		if (window.scrollY >= 10) {
+			document.querySelector('.ds-header').classList.add('ds-fixed-header');
+		} else {
+			document.querySelector('.ds-header').classList.remove('ds-fixed-header');
+		}
+	});
 
+	// Trigger the scroll event to apply the initial state
+	window.dispatchEvent(new Event('scroll'));
 
 });
