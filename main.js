@@ -42,7 +42,7 @@ function typeWriter() {
       setTimeout(typeWriter, typingSpeed);
     } else {
       // Move to the next line and keep cursor at the end
-      typingElement.innerHTML += "<br>";
+      currentText += textLines[lineIndex] + "<br>";
       charIndex = 0;
       lineIndex++;
       setTimeout(typeWriter, lineBreakDelay);
