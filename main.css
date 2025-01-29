@@ -11,7 +11,21 @@ body {font-family: 'Inter', sans-serif;
   color:#373737;
   font-size:14px}
 
-  .typewriter {
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 24px;
+  background: black;
+  margin-left: 5px;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+
+  /*.typewriter {
 	overflow: hidden;
 	border-right: .15em solid orange;
 	white-space: nowrap;
@@ -25,10 +39,10 @@ body {font-family: 'Inter', sans-serif;
 	to { width: 100% }
 	}
 
-	@keyframes blink-caret {
+        @keyframes blink-caret {
 	from, to { border-color: transparent } 
 	50% { border-color: orange; }
-	}
+	}*/
 
 a,a:hover,a:focus,i,input,button,input:focus,.transition {text-decoration: none;
   outline: none;
