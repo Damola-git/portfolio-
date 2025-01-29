@@ -1,18 +1,4 @@
-/*
-Theme Name: Jason Stroff
 
-  1. >>> Headr Style
-  2. >>> Banner Style
-  3. >>> About Style
-  4. >>> Skills Style
-  5. >>> Experience Style
-  6. >>> Work Style
-  7. >>> Footer Style
-
-*/
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------*/
 html {font-family: 'Inter', sans-serif; 
 	background-color:#FFF
   }
@@ -81,9 +67,7 @@ h1,h2,h3,h4,h5,h6 {font-family: 'Inter', sans-serif;}
 figure{ margin: 0 }
 svg,img { max-width: 100%; height: auto; }
 
-/*-----------------------------------------------------------------
-1. >>> Headr Style
-----------------------------------------------------------------*/
+
 .ds-header{ position: fixed; 
   top: 0;
   width: 100%; 
@@ -146,9 +130,7 @@ svg,img { max-width: 100%; height: auto; }
 
 .ds-social li a:hover{ background-color: #000; 
   color: #FFF; }
-/*-----------------------------------------------------------------
-2. >>> Banner Style
-----------------------------------------------------------------*/
+
 .ds-banner section{ padding-left: 70px; 
   padding-right: 100px; }
 .ds-banner section h1 span{ display: block; 
@@ -205,9 +187,7 @@ svg,img { max-width: 100%; height: auto; }
   color: #FFF; }
 .ds-arrow-button i{ display: inline-block; 
   vertical-align: middle; }
-/*-----------------------------------------------------------------
-4. >>> Skills Style
-----------------------------------------------------------------*/
+
 .ds-skills-section{ padding-bottom: 105px; }
 .ds-skills-list{ list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; align-items: center; margin-top: 11px; }
 .ds-skills-list li{ display: inline-block; color: #373737; font-size: 16px; padding:10px 20px; background-color: #FFF; border: 1px solid #D7D7D7;
@@ -258,11 +238,6 @@ span.ds-department{ color: #373737; font-weight: 500; font-size: 18px; padding-b
 .ds-copyright a{color: rgba(255,255,255,0.5);}
 .ds-copyright a:hover{ color: #F26464; }
 
-
-
-/*-------------------------------------------------------------------------------
-Responsive XS Style @media (max-width: 767px) 
--------------------------------------------------------------------------------*/
 @media (max-width: 768px) {
   .ds-header,.ds-header.ds-fixed-header{ padding: 15px 0; }
   .ds-banner,.ds-about-section,.ds-skills-section,.ds-blog-section,.ds-work-section,.ds-work-details-section{ padding-left: 10px; padding-right: 10px; }
@@ -305,7 +280,7 @@ Responsive XS Style @media (max-width: 767px)
   .ds-banner section{ padding-right: 0; }
   
   .ds-work-list section{ padding-right: 30px; 
-						 padding-bottom:60px; }
+			 padding-bottom:60px; }
 
 
 }
