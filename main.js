@@ -37,7 +37,7 @@ let lineBreakDelay = 800; // Delay before the next line starts
 function typeWriter() {
   if (lineIndex < textLines.length) {
     if (charIndex < textLines[lineIndex].length) {
-      typingElement.innerHTML += textLines[lineIndex].charAt(charIndex); + `<span class="cursor"></span>`;
+      typingElement.innerHTML = currentText + textLines[lineIndex].substring(0, charIndex + 1) + `<span class="cursor"></span>`;
       charIndex++;
       setTimeout(typeWriter, typingSpeed);
     } else {
