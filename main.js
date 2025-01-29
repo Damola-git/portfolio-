@@ -29,26 +29,35 @@ const textLines = [
   const typingElement = document.getElementById("typing-text");
 const cursorSpan = document.querySelector(".cursor");
 
+
 let lineIndex = 0;
 let charIndex = 0;
 let typingSpeed = 100; // Adjust speed here
 let lineBreakDelay = 800; // Delay before the next line starts
+let currentText = ""; // Stores typed text
 
 function typeWriter() {
   if (lineIndex < textLines.length) {
     if (charIndex < textLines[lineIndex].length) {
+      // Keep previous text and append new character
       typingElement.innerHTML = currentText + textLines[lineIndex].substring(0, charIndex + 1) + `<span class="cursor"></span>`;
       charIndex++;
       setTimeout(typeWriter, typingSpeed);
     } else {
-      // Move to the next line and keep cursor at the end
+      // Line is fully typed, store it and move to next line
       currentText += textLines[lineIndex] + "<br>";
       charIndex = 0;
       lineIndex++;
       setTimeout(typeWriter, lineBreakDelay);
     }
+  } else {
+    // Remove cursor after last line
+    typingElement.innerHTML = currentText;
   }
 }
+
+
+
 /*  let lineIndex = 0;
   let charIndex = 0;
   let typingSpeed = 100; // Speed of typing
