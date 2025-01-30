@@ -25,7 +25,7 @@ const textLines = [
 
 
   const typingElement = document.getElementById("typing-text");
-const cursorSpan = document.querySelector(".cursor");
+/*const cursorSpan = document.querySelector('cursor')
 
 
 let lineIndex = 0;
@@ -52,14 +52,14 @@ function typeWriter() {
    
     typingElement.innerHTML = currentText;
   }
-}
+}*/
 
 
 
-/*  let lineIndex = 0;
+  let lineIndex = 0;
   let charIndex = 0;
-  let typingSpeed = 100; // Speed of typing
-  let lineBreakDelay = 800; // Delay before typing the next line
+  let typingSpeed = 100; 
+  let lineBreakDelay = 800; 
 
   function typeWriter() {
     if (lineIndex < textLines.length) {
@@ -74,6 +74,6 @@ function typeWriter() {
         setTimeout(typeWriter, lineBreakDelay);
       }
     }
-  }*/
+  }
 
   typeWriter();
