@@ -11,7 +11,7 @@ body {font-family: 'Inter', sans-serif;
   color:#373737;
   font-size:14px}
 
-.cursor {
+/*.cursor {
   display: inline-block;
   width: 8px;
   height: 24px;
@@ -23,7 +23,7 @@ body {font-family: 'Inter', sans-serif;
 @keyframes blink {
   50% { opacity: 0; }
 }
-
+*/
 
   /*.typewriter {
 	overflow: hidden;
