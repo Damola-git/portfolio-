@@ -20,8 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 const textLines = [
-  "I'm Adedamola Adejumo, a FRONTEND DEVELOPER from",
-  "Lagos, Nigeria."
+  "I'm Adedamola Adejumo, a FRONTEND DEVELOPER from Lagos, Nigeria."
 ];
 
 
